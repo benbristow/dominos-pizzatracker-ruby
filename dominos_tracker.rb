@@ -74,8 +74,9 @@ puts "Manager: #{pizza.get_store_manager_name}"
 puts "===================================================================================="
 
 while true
-  if (status = pizza.get_pizza_status != last_status)
-    puts "Your pizza #{pizza.get_pizza_status}."
+  status = pizza.get_pizza_status
+  if (status != last_status)
+    puts "Your pizza #{status}."
     last_status = status
   end
   sleep 30
